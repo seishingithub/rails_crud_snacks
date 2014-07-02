@@ -1,0 +1,21 @@
+<%= form_for @snack do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :quality %>
+    <%= f.text_field :quality %>
+  </p>
+  <p>
+    <%= f.submit 'Create snack' %>
+  </p>
+<% end %>
+
+<% @snacks.each do |snack| %>
+<ul>
+  <li>
+    <%= snack.name %><br><%= snack.quality %>
+  </li>
+</ul>
+<% end %>
