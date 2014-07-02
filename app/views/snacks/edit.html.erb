@@ -8,14 +8,6 @@
     <%= f.text_field :quality %>
   </p>
   <p>
-    <%= f.submit 'Create snack' %>
+    <%= f.submit 'Update' %>
   </p>
-<% end %>
-
-<% @snacks.each do |snack| %>
-<ul>
-  <li>
-    <%= link_to "#{snack.name}", snack_path(snack) %><br><%= snack.quality %>
-  </li>
-</ul>
 <% end %>
