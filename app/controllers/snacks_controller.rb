@@ -26,7 +26,13 @@ class SnacksController < ApplicationController
     @snack = Snack.find(params[:id])
     @snack.update_attributes!(snack_params)
 
-    redirect_to snacks_path 
+    redirect_to snacks_path
+  end
+
+  def destroy
+    @snack = Snack.find(params[:id]).delete
+
+    redirect_to snacks_path
   end
 
   private
